@@ -7,15 +7,18 @@ public abstract class Student {
     private String id;
     private double numOfSubjects;
     private double maxScore;
+    private String step;
+
 
     public Student(){}
-    public Student(String fullName, double score, int age, String id, double numOfSubjects, double maxScore){
+    public Student(String fullName, double score, int age, String id, double numOfSubjects, double maxScore, String step){
         this.fullName = fullName;
         this.score = score;
         this.age = age;
         this.id = id;
         this.numOfSubjects = numOfSubjects;
         this.maxScore = maxScore;
+        this.step = step;
     }
 
     public double getScore() {
@@ -44,6 +47,10 @@ public abstract class Student {
 
     public double getMaxScore() {
         return maxScore;
+    }
+
+    public String getStep() {
+        return step;
     }
 
     public abstract void calculateScore();
